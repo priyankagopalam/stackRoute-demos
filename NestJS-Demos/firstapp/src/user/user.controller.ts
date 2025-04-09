@@ -4,7 +4,7 @@ import { User } from './model/user';
 
 @Controller('user')
 export class UserController {
-    constructor(private readonly userService: UserService) { }
+    constructor(private readonly userService: UserService) { }   
 
     @Get('/email')
     showEmail() {
