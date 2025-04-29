@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Navigate, Outlet } from "react-router-dom";
 
 export default function ProtectedRoute() {
@@ -11,7 +11,7 @@ export default function ProtectedRoute() {
             }
         }).then(res => res.json())
             .then(data => setIsAuthenticated(data.isAuthenticated))
-            .catch(err => setIsAuthenticated(false));
+            .catch(_err => setIsAuthenticated(false));
     }, [])
 
     if (isAuthenticated == null) {

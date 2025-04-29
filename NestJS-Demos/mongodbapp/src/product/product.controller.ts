@@ -34,6 +34,7 @@ export class ProductController {
             res.status(404).send({ message: `Product with product id: ${id} does not exists` });
         }
         return res.status(200).send(prd);
+        // throw new Error('Unknow Error Occurred');
     }
 
     @Put(":id")
